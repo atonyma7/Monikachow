@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
-    public float speed = 1f;
+    public float Speed = 5.9f;
     public Rigidbody2D rb;
     void Start()
     {
-        rb.velocity = transform.right * speed;
+        rb.velocity = transform.right * Speed;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(collision.name);
     }
 }
