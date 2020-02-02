@@ -21,12 +21,12 @@ public class drawLine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1))
         {
             CreateLine();
             Debug.Log(Input.mousePosition);
         }
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(1))
         {
             Vector2 tempFingerPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             if (Vector2.Distance(tempFingerPos, fingerPositions[fingerPositions.Count - 1]) > .1f) {
