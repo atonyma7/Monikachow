@@ -24,6 +24,7 @@ public class drawLine : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             CreateLine();
+            Debug.Log(Input.mousePosition);
         }
         if (Input.GetMouseButton(0))
         {
@@ -44,7 +45,7 @@ public class drawLine : MonoBehaviour
         fingerPositions.Add(Camera.main.ScreenToWorldPoint(Input.mousePosition));
         fingerPositions.Add(Camera.main.ScreenToWorldPoint(Input.mousePosition));
         lineRenderer.SetPosition(0, fingerPositions[0]);
-        lineRenderer.SetPosition(0, fingerPositions[1]);
+        lineRenderer.SetPosition(1, fingerPositions[1]);
         edgeCollider.points = fingerPositions.ToArray();
     }
 
