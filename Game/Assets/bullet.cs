@@ -10,12 +10,4 @@ public class bullet : MonoBehaviour
     {
         rb.velocity = transform.right * Speed;
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.name != "player-stand-1") {
-            Debug.Log(collision.name);
-            rb.velocity = Vector2.zero;
-        }
-    }
 }
