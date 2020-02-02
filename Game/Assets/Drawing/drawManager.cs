@@ -20,6 +20,7 @@ public class drawManager : MonoBehaviour
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved || Input.GetMouseButtonDown(0))
         {
             theTrail = (GameObject)Instantiate(drawPreFab, this.transform.position, Quaternion.identity);
+            BoxCollider tempBoxCollider = GetComponent<BoxCollider>();
             Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             float _dis;
             if (planeObj.Raycast(mouseRay, out _dis))
