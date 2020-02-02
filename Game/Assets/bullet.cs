@@ -13,6 +13,9 @@ public class bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.name);
+        if (collision.name != "player-stand-1") {
+            Debug.Log(collision.name);
+            rb.velocity = Vector2.zero;
+        }
     }
 }
