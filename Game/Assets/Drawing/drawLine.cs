@@ -10,12 +10,12 @@ public class drawLine : MonoBehaviour
     public LineRenderer lineRenderer;
     public EdgeCollider2D edgeCollider;
     public List<Vector2> fingerPositions;
+    public int gauge = 1000;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -24,12 +24,14 @@ public class drawLine : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             CreateLine();
-            Debug.Log(Input.mousePosition);
         }
         if (Input.GetMouseButton(1))
         {
+            gauge -= 1;
+            Debug.Log(gauge);
             Vector2 tempFingerPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            if (Vector2.Distance(tempFingerPos, fingerPositions[fingerPositions.Count - 1]) > .1f) {
+            if (Vector2.Distance(tempFingerPos, fingerPositions[fingerPositions.Count - 1]) > .1f && (gauge > 0));
+            {
                 UpdateLine(tempFingerPos);
             }
         }
