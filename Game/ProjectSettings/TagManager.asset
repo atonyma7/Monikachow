@@ -39,11 +39,7 @@ TagManager:
   - 
   m_SortingLayers:
   - name: Background
-<<<<<<< Updated upstream
-    uniqueID: 972603959
-=======
-    uniqueID: 1975262499
->>>>>>> Stashed changes
+    uniqueID: 2595317013
     locked: 0
   - name: Default
     uniqueID: 0
